@@ -47,7 +47,7 @@ router.put("/:id", (request, response, next) => {
   const updatedPerson = {
     number: body.number,
   };
-  People.findByIdAndUpdate(id, updatedPerson, {
+  People.findByIdAndUpdate(request.params.id, updatedPerson, {
     new: true,
     runValidators: true,
     context: "query",

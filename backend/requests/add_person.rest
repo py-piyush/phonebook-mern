@@ -1,0 +1,45 @@
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "Me",
+    "number": "234567"
+}
+
+###
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "number":"12345678"
+}
+
+###
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name":"Me"
+}
+
+###
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "Arto Hellas",
+    "number":"12345678"
+}
+
+###
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "SIMBA",
+    "number":"gjkafd12345678"
+}
+
+
+###
+GET http://localhost:3001/api/persons

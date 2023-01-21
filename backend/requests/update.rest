@@ -1,0 +1,19 @@
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name":"MeMe",
+    "number":"234567"
+}
+
+###
+PUT http://localhost:3001/api/persons/63cb90fbb58ff8ed513d4be6
+Content-Type: application/json
+
+{
+    "name":"MeMe",
+    "number":"12345"
+}
+
+###
+GET http://localhost:3001/api/persons
