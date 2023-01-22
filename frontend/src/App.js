@@ -93,10 +93,9 @@ const App = () => {
   );
 
   return (
-    <div>
-      <h1>Contacts</h1>
+    <div className="container">
+      <h1>Phonebook</h1>
       <Notification message={msg} />
-      <Filter filter={filter} setFilter={setFilter} />
       <h2>Add new</h2>
       <NewPersonForm
         newName={newName}
@@ -105,7 +104,8 @@ const App = () => {
         setNewNumber={setNewNumber}
         addNewNameandNumber={addNewNameandNumber}
       />
-      <h2>Numbers</h2>
+      <h2>Contact List</h2>
+      <Filter filter={filter} setFilter={setFilter} />
       <Persons displayPerson={displayPerson} handleDelete={handleDelete} />
     </div>
   );

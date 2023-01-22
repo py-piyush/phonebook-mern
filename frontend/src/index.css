@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 50px 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +10,158 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+h1,h2,h3{
+  margin: 10px auto;
+  color: #a22d0d;
+  font-weight: bold;
+}
+h1{
+  text-transform: uppercase;
+  font-size: 48px;
+  font-family: monospace;
+}
+h2{
+  font-size: 30px;
+}
+.container{
+  width: min(700px, 80%);
+  margin: 0 auto;
+  padding: 30px 0;
+  text-align: center;
+  border: 3px solid #d26220;
+  border-radius: 20px;
+  background: #f6d393;
+}
+.success,
+.error {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: min(500px, 80%);
+  margin: 0 auto;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #efefef;
+  text-transform: capitalize;
+}
+
+.success {
+  color: #0f880f;
+  border: 2px solid #0f880f;
+}
+
+.error {
+  color: #d21d1d;
+  border: 2px solid #d21d1d;
+}
+
+form .txt_field {
+  position: relative;
+  text-align: left;
+  border-bottom: 2px solid #424242;
+  margin-bottom: 20px;
+}
+
+form{
+  margin: 0 auto;
+  padding: 0 40px;
+  width: min(400px, 80%)
+}
+
+.txt_field input {
+  width: 100%;
+  padding: 0 5px;
+  height: 25px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.txt_field label {
+  color: #121212;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: .5s;
+}
+
+
+.btn{
+  padding: 3px 10px;
+  border: 0;
+  outline: none;
+  background: none;
+  border: 1px solid #121212;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #121212;
+}
+.add:hover{
+  background-color: #0f880f;
+}
+.delete:hover{
+  background-color: #d21d1d;
+}
+.btn:hover{
+  cursor: pointer;
+  color:#efefef;
+}
+
+.search{
+  margin: 10px auto;
+  font-size: 24px;
+}
+.search input{
+  margin: 0 10px;
+  padding: 0 20px;
+  border: none;
+  outline: none;
+  background: none;
+  border: 1px solid #121212;
+  border-radius: 5px;
+  height: 30px;
+  width: 40%;
+  transform: translateY(-2px);
+  font-size: 16px;
+}
+
+.contacts{
+  width: 60%;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.contact{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #a22d0d;
+  flex-wrap: wrap;
+  
+}
+.contact p{
+  margin: 12px 0;
+}
+.contact:last-child{
+  border: none;
+}
+
+@media screen and (max-width:700px) {
+  .contact{
+    flex-direction: column;
+    padding-bottom: 10px;
+    justify-content: center;
+    align-items: start;
+  }
+  .contact p{
+    margin: 5px 0;
+  }
 }
