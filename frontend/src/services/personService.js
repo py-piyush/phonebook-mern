@@ -7,4 +7,8 @@ const getAll = () => {
   return request.then((response) => response.data);
 };
 
-export default getAll;
+const create = (obj) => {
+  return axios.post(baseUrl, obj).then((response) => response.data);
+};
+
+export default { getAll, create };
