@@ -22,8 +22,14 @@ const App = () => {
     const personObj = { name: newName, number: newNumber };
     const check = persons.find((p) => p.name === personObj.name);
     if (check) {
-      alert("Person already exist!");
-      return;
+      if (
+        window.confirm(
+          `${check.name} already exists. Do you want to update the number for ${check.name}?`
+        )
+      ) {
+        updateNumber(check.id);
+        return;
+      }
     }
     services
       .create(personObj)
@@ -39,6 +45,16 @@ const App = () => {
     services.deletePerson(id).then(() => {
       setPersons(persons.filter((p) => p.id !== id));
     });
+  };
+
+  const updateNumber = (id) => {
+    const updatePerson = persons.find((p) => p.id === id);
+    const changedNumber = { ...updatePerson, number: newNumber };
+    services.update(id, changedNumber).then((returnedPerson) => {
+      setPersons(persons.map((p) => (p.id === id ? returnedPerson : p)));
+    });
+    setNewName("");
+    setNewNumber("");
   };
 
   let displayPerson = persons.filter((p) =>
