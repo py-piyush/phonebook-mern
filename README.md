@@ -8,7 +8,11 @@ A web application to save, search, update, and delete phone numbers of people.
 
 ### Video Demo
 
+> https://youtu.be/t8F6pJdrsNk
+
 ### Live
+
+> https://phonebook-mern-production.up.railway.app/
 
 ### Features
 
