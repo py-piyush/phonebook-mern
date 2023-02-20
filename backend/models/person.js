@@ -9,11 +9,11 @@ const personSchema = new mongoose.Schema({
   },
   number: {
     type: String,
+    minlength: [8, "Number must have at least 8 characters"],
     validate: {
       validator: function (v) {
         return /^\d{2,3}-?\d{1,}$/.test(v);
       },
-      minlength: [8, "Number must have at least 8 characters"],
       required: [true, "Why no number?"],
     },
   },
